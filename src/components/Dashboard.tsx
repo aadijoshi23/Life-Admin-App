@@ -1,16 +1,26 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { LifeTask, TaskCategory } from "@/types/task";
 import { categories, sampleTasks } from "@/data/sampleTasks";
+import { useAuth } from "@/hooks/useAuth";
 import { Header } from "./Header";
 import { HeroSection } from "./HeroSection";
 import { StatsOverview } from "./StatsOverview";
 import { CategoryCard } from "./CategoryCard";
 import { TaskCard } from "./TaskCard";
-import { ChevronLeft, Filter } from "lucide-react";
+import { ChevronLeft, Filter, Loader2 } from "lucide-react";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
 
 export const Dashboard = () => {
+  const { user, loading } = useAuth();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!loading && !user) {
+      navigate('/auth');
+    }
+  }, [user, loading, navigate]);
   const [tasks, setTasks] = useState<LifeTask[]>(sampleTasks);
   const [selectedCategory, setSelectedCategory] = useState<TaskCategory | null>(null);
   const [filter, setFilter] = useState<"all" | "overdue" | "due-soon">("all");
@@ -35,6 +45,14 @@ export const Dashboard = () => {
     const statusOrder = { overdue: 0, "due-soon": 1, upcoming: 2, completed: 3 };
     return statusOrder[a.status] - statusOrder[b.status];
   });
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <Loader2 className="h-8 w-8 animate-spin text-primary" />
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-background">

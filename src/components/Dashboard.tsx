@@ -8,9 +8,11 @@ import { HeroSection } from "./HeroSection";
 import { StatsOverview } from "./StatsOverview";
 import { CategoryCard } from "./CategoryCard";
 import { TaskCard } from "./TaskCard";
+import { AddTaskDialog } from "./AddTaskDialog";
 import { ChevronLeft, Filter, Loader2 } from "lucide-react";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
+import { useToast } from "@/hooks/use-toast";
 
 export const Dashboard = () => {
   const { user, loading } = useAuth();
@@ -21,9 +23,19 @@ export const Dashboard = () => {
       navigate('/auth');
     }
   }, [user, loading, navigate]);
+  const { toast } = useToast();
   const [tasks, setTasks] = useState<LifeTask[]>(sampleTasks);
   const [selectedCategory, setSelectedCategory] = useState<TaskCategory | null>(null);
   const [filter, setFilter] = useState<"all" | "overdue" | "due-soon">("all");
+  const [addTaskOpen, setAddTaskOpen] = useState(false);
+
+  const handleAddTask = (task: LifeTask) => {
+    setTasks(prev => [...prev, task]);
+    toast({
+      title: "Task added",
+      description: `"${task.title}" has been added to ${task.category}.`,
+    });
+  };
 
   const handleToggleComplete = (id: string) => {
     setTasks(prev =>
@@ -56,7 +68,12 @@ export const Dashboard = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
+      <Header onAddTask={() => setAddTaskOpen(true)} />
+      <AddTaskDialog
+        open={addTaskOpen}
+        onOpenChange={setAddTaskOpen}
+        onAddTask={handleAddTask}
+      />
 
       <main className="container mx-auto px-4 pb-12">
         <HeroSection />

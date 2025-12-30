@@ -22,6 +22,15 @@
   <meta property="og:description" content="Life Admin App Project">
   <meta name="twitter:description" content="Life Admin App Project">
   <link rel="icon" type="image/x-icon" href="https://storage.googleapis.com/gpt-engineer-file-uploads/1xqo36cC5PdcKQg8hm9ub4udVwU2/uploads/1767062330853-trusted-profile-icon-solid-black-600nw-2679396225.webp">
+  <script>
+  (function () {
+    const params = new URLSearchParams(window.location.search)
+    const redirect = params.get('redirect')
+    if (redirect) {
+      window.history.replaceState(null, '', redirect)
+    }
+  })()
+</script>
   <script type="module" crossorigin src="/Life-Admin-App/assets/index-D5p6xOe-.js"></script>
   <link rel="stylesheet" crossorigin href="/Life-Admin-App/assets/index-Bc9OnGZ9.css">
 </head>

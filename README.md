@@ -89,7 +89,7 @@ The current version serves as a **scalable MVP**.
 
 This project was developed with guidance and support from **AI tools** as part of the learning and development process.
 
-- **ChatGPT (Nobu)** was used for step-by-step guidance, debugging support, deployment assistance, and conceptual clarity during development.
+- **ChatGPT** was used for step-by-step guidance, debugging support, deployment assistance, and conceptual clarity during development.
 - **Lovable AI** was used initially to scaffold the project structure and generate the base setup, after which the project was fully customized, debugged, and extended manually by the team.
 
 All design decisions, implementation choices, debugging, and final integration were reviewed and executed by the team members.

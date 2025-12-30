@@ -78,6 +78,13 @@ The current version serves as a **scalable MVP**.
 
 ---
 
+## 👥 Team Members
+
+- Aadi Joshi  
+- Neer Joshi  
+- Baibhav Gusain  
+- Ansh Gupta
+
 ## 🖥 Running the Project Locally
 
 ```bash

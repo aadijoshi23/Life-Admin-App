@@ -106,6 +106,11 @@
   body {
     @apply bg-background text-foreground font-outfit antialiased;
   }
+
+  a[href*="lovable"],
+  div[class*="lovable"] {
+    display: none !important;
+  }
 }
 
 @layer utilities {

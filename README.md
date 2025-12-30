@@ -1,73 +1,87 @@
-# Welcome to your Lovable project
+# 🧠 Life Admin App
 
-## Project info
+**Life Admin App** is a simple and practical web application designed to help users manage everyday life in one place.  
+The project focuses on **clarity, usability, and real-world usefulness** rather than unnecessary complexity.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+This project was built as a **hackathon submission** with an MVP-first approach.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 🚀 Problem Statement
 
-**Use Lovable**
+People often rely on multiple apps to manage:
+- Daily tasks
+- Notes and planning
+- Basic personal organization
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+Most existing solutions are either **too complex**, **overloaded**, or **not beginner-friendly**.
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## 💡 Solution
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Life Admin App brings essential life-management tools into a **single, minimal interface** that is:
+- Easy to use
+- Fast to understand
+- Easy to extend
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+The goal is to provide a **strong foundation** that can grow over time.
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## ✨ Features (Current Version)
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### 📝 Task Manager
+- Add tasks
+- Mark tasks as completed
+- Delete tasks
 
-# Step 3: Install the necessary dependencies.
-npm i
+### 📅 Daily Planner
+- Write and save daily notes
+- Simple and distraction-free UI
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+### 💾 Local Storage
+- Data is saved in the browser
+- No login or backend required
+
+---
+
+## 🛠 Tech Stack
+
+- **Frontend:** React + TypeScript  
+- **Styling:** Tailwind CSS  
+- **Build Tool:** Vite  
+- **State Management:** React Hooks  
+- **Storage:** Browser LocalStorage  
+- **Version Control:** Git & GitHub  
+
+---
+
+## 🧠 How It Works
+
+1. User interacts with tasks or notes
+2. State is handled using React hooks
+3. Data is stored locally in the browser
+4. Component-based structure ensures clean and maintainable code
+
+---
+
+## 📈 Future Scope
+
+- 💸 Expense Tracker  
+- 🌙 Dark Mode  
+- 🔐 Authentication  
+- ☁️ Cloud Sync  
+- 🤖 Smart reminders and suggestions  
+
+The current version serves as a **scalable MVP**.
+
+---
+
+## 🖥 Running the Project Locally
+
+```bash
+git clone https://github.com/aadijoshi23/Life-Admin-App.git
+cd Life-Admin-App
+npm install
 npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)

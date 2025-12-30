@@ -1,7 +1,8 @@
-import { Compass, Plus, Bell, LogOut } from "lucide-react";
+import { Compass, Plus, LogOut } from "lucide-react";
 import { Button } from "./ui/button";
 import { useAuth } from "@/hooks/useAuth";
 import { useToast } from "@/hooks/use-toast";
+import { NotificationPopover } from "./NotificationPopover";
 
 interface HeaderProps {
   onAddTask?: () => void;
@@ -37,12 +38,7 @@ export const Header = ({ onAddTask }: HeaderProps) => {
               {user.email}
             </span>
           )}
-          <Button variant="ghost" size="icon" className="relative">
-            <Bell className="w-5 h-5" />
-            <span className="absolute -top-0.5 -right-0.5 w-4 h-4 rounded-full bg-destructive text-destructive-foreground text-[10px] font-bold flex items-center justify-center">
-              3
-            </span>
-          </Button>
+          <NotificationPopover />
           <Button onClick={onAddTask} className="gap-2">
             <Plus className="w-4 h-4" />
             <span className="hidden sm:inline">Add Task</span>

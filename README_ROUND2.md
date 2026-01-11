@@ -56,7 +56,7 @@ Enhance the prototype by:
 
 ## 📈 Expected Outcome
 
-By Round 2, Life Admin App will evolve from a basic prototype into a **fully usable personal productivity tool**, ready for real users.
+By Round 2,Life Admin App will evolve from a basic prototype into a **fully usable personal productivity tool**, ready for real users.
 
 ---
 
